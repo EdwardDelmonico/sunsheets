@@ -16,7 +16,8 @@ const vanceSpellSchema = new mongoose.Schema({
     size: {
         height: Number,
         width: Number
-    }
+    },
+    nightside: Boolean
 })
 
 const VanceSpell = mongoose.model('VanceSpell', vanceSpellSchema);

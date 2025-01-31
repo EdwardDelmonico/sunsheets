@@ -9,7 +9,7 @@ const secretSchema = new mongoose.Schema({
         type: String,
         enum: suns
     },
-    characterSecret: Boolean
+    nightside: Boolean
 })
 
 const Secret = mongoose.model('Secret', secretSchema);

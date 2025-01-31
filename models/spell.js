@@ -9,7 +9,8 @@ const spellSchema = new mongoose.Schema({
         type: String,
         enum: suns
     },
-    facet: String
+    facet: String,
+    nightside: Boolean
 })
 
 const Spell = mongoose.model('Spell', spellSchema);

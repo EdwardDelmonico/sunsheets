@@ -5,7 +5,8 @@ const aggregateSchema = new mongoose.Schema(
         name: String,
         description: String,
         qualities: Array,
-        absences: Array
+        absences: Array,
+        nightside: Boolean
     }
 )
 

@@ -10,7 +10,8 @@ const forteAbilitySchema = new mongoose.Schema({
         enum: suns
     },
     cost: Number,
-    facet: String
+    facet: String,
+    unlocked: Boolean
 })
 
 const ForteAbility = mongoose.model('ForteAbility', forteAbilitySchema);
