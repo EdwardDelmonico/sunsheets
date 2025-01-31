@@ -15,7 +15,7 @@ const VislaeSchema = new Schema({
     experience: Array,
     currency: {
         orbs: {
-            current: Number,
+            savings: Number,
             income: Number
         },
         magecoins: Number,
