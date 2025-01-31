@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const suns = require('../assets/lists/suns.js')
 
 const secretSchema = new mongoose.Schema({
     name: String,
@@ -6,7 +7,7 @@ const secretSchema = new mongoose.Schema({
     description: String,
     color: {
         type: String,
-        enum: ['silver', 'green', 'blue', 'indigo', 'grey', 'pale', 'red', 'gold', 'invisible']
+        enum: suns
     },
     characterSecret: Boolean
 })
