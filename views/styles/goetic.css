@@ -1,0 +1,601 @@
+/* General */
+
+/* Colors
+-Border- #DA7020
+-Text- #70141B
+ */
+
+ html{
+}
+
+body{
+    background-color: #DA7020;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    background-color: white;
+    width:85%;
+    max-width: 1800px;
+    color: #70141B;
+    border-radius: 5px;
+    overflow-x: scroll;
+}
+
+section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+hr{
+    width: 100%
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font:inherit;
+    color:inherit;
+    cursor: pointer;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    height:auto;
+}
+
+.order{
+    display:none;
+}
+
+/* Circled */
+
+.circled-children{
+    flex-flow: row wrap;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.circled-children * {
+    transition-duration: inherit;
+    transition-timing-function: inherit;
+}
+
+.circled-children > * {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-image: url(Images/Goetic\ Circle\ Opaque.png);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    background-size: contain;
+    background-position: 50% 50%;
+    transition-duration: inherit;
+    transition-timing-function: inherit;
+    box-sizing: border-box;
+}
+
+.circled{
+
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-image: url(Images/Goetic\ Circle\ Opaque.png);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.circled *{
+    transition-duration: inherit;
+    transition-timing-function: inherit; 
+}
+
+.tabcontent:not(:nth-of-type(1)) {
+    display: none;
+}
+
+/* entries */
+
+.entry-list{
+    flex-flow:column nowrap;
+}
+
+
+/* animate */
+
+.animate:hover{
+    transform:rotate(135deg);
+}
+
+.animate:hover *{
+    transform:rotate(-135deg); 
+    color:#DA7020;
+}
+
+.overlap>*:hover{
+    z-index: 1;
+}
+
+.add-button:hover{
+    color:#DA7020;
+}
+
+/* Hover */
+
+.hoverPopUp{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+
+}
+
+/* Header */
+
+.character-header{
+    position:relative;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: space-around;
+    text-align: center;
+    align-items: baseline;
+    height: auto;
+    width: 100%;
+}
+
+.header-buttons{
+    flex-flow: column nowrap;
+    width: fit-content;
+    align-items: flex-start;
+}
+
+.header-buttons > *{
+    height: 200px;
+    width: 100px;
+}
+
+.character-header * {
+    height: 100%;
+    min-height: 75px;
+}
+
+.character-tab{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    align-content: space-around;
+    height: 100%;
+    width: 100%;
+box-sizing: border-box;
+}
+
+.name-and-sentence{
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.sentence{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    min-width: 500px;
+    height: inherit;
+    flex-grow: 1;
+}
+
+#name{
+    flex-grow: 1;
+    flex-basis: 300px;
+    width:100%;
+    min-width: 400px;
+    height:2rem;
+    display: block;
+}
+
+#forte{
+    flex-grow: 1;
+}
+
+.heart-relationships{
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+/* Experience */
+
+.experience-tab{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100px;
+    width: 100%;
+}
+
+.experience{
+    flex-flow:column nowrap;
+    height:auto;
+    max-height: inherit;
+    width: 100%;
+    margin-right: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience>div{
+    position:relative;
+    flex-flow:column nowrap;
+    height:auto;
+    width: 8em;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.experience>*>div{
+    height: 75px;
+    width: 75px;
+}
+
+.experience>*>div:first-of-type{
+    position:absolute;
+   left: 60%;
+   bottom: 40%;
+   z-index: 1;
+   height:50px;
+   width: 50px;
+}
+
+/* Nav */
+
+nav{
+    display:flex;
+    flex-flow: row nowrap;
+    width:100%;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.tablink{
+    flex-grow:1;
+    flex-basis: 10%;
+    transition-duration: .2s;
+}
+
+.tablink:hover{
+    color:#DA7020;
+}
+
+.activeDamage{
+    color:#DA7020;
+}
+
+/* Condition */
+
+.condition{
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height:auto;
+}
+
+
+.health{
+    display: flex;
+    flex-flow: row wrap;
+    position:relative;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-size: contain;
+    box-sizing: border-box;
+    height: 500px;
+    width: 200px;
+    flex-grow: 1;
+}
+
+.health> *{
+    display: flex;
+    flex-flow: row nowrap;
+    flex-basis: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.health-label{
+    display: flex;
+    align-items: center;
+}
+
+
+
+#armor{
+
+}
+
+#injuries{
+
+}
+
+#wounds{
+
+}
+
+#anguish{
+
+}
+
+#armor{
+    margin-left: -40px;
+    margin-right: 40px;
+
+}
+
+.health span{
+    height: 50px;
+    width: 50px;
+    flex-grow: 0;
+}
+
+.incoming-damage{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    margin-left: ;
+    margin-right: ;
+    margin-top: ;
+    margin-bottom: ;
+}
+
+.incoming-damage> *{
+    height: 50px;
+    width: 60%;
+}
+
+.damage-buttons{
+    background-color:#70141B;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 24px;
+    transition:.2s;
+}
+
+.damage-buttons:hover{
+    background-color: #DA7020;
+}
+
+#damage-switch{
+    display: inline;
+    flex-direction: row;
+    width: auto;
+    font-size: 24px;
+    align-items: flex-end;
+    transition-duration: .2s;
+}
+
+#damage-switch button:hover{
+    color:#DA7020;
+}
+
+/* Rests */
+
+.rests{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    padding: 5%;
+    margin-left: ;
+    margin-right: ;
+    margin-top: ;
+    margin-bottom: ;
+}
+
+.rests *{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    flex-basis: 50%
+}
+
+/* Quick Actions */
+
+.quick-actions{
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top: -200px;
+}
+
+.quick-actions>div{
+    flex-flow: row wrap;
+}
+
+.quick-actions>div>*{
+    width: 100px;
+    height: 100px;
+}
+
+#offense{
+    margin-top: ;
+    margin-bottom: ;
+}
+
+#defense{
+    flex-flow: row wrap-reverse;
+    margin-top: ;
+    margin-bottom: ;
+    margin-left: -75px;
+    margin-right: 75px;
+}
+
+/* Pools */
+
+.all-pools{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin: -50px 0;
+    align-self: center;
+}
+
+.all-pools > *{
+    width: 100vh;
+    flex-basis: 100%;
+    flex-shrink: 1
+}
+
+#certes-label, #qualia-label{
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    height: fit-content;
+    margin: 25px 0px;
+}
+
+.pools{
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-grow: 1;
+}
+
+.pools>*{
+    height: 250px;
+    flex-basis: 25%;
+    font-size: 36px;
+}
+
+/* Abilities */
+
+/* Skills */
+
+.skills{
+
+}
+
+
+/* Goetic */
+
+.order>div{
+height: 400px;
+width: 400px;
+}
+
+/* Arcs */
+
+/* Appearance */
+
+/* Possessions */
+
+/* Magic */
+
+/* Bonds */
+
+#pcBondList{
+    display:flex;
+    flex-direction:column;
+}
+
+#allBonds{
+    display:flex;
+    flex-flow: row wrap;
+}
+
+#npcBonds{
+    justify-self: flex-end;
+}
+
+/* .bonds{
+    margin: 0 100%;
+} */
+
+.bonds>*{
+    padding:200px 200px;
+}
+
+    /* Arcs */
+
+.arcs>*{
+    flex-flow: row wrap;
+    padding: 200px 100px;
+}
+
+    /* Appearance */
+
+.appearance>*{
+    flex-flow: row wrap;
+    padding: 200px 100px;
+}
+
+
+/* Money */
+
+.money-tab{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100px;
+}
+
+.money{
+    flex-flow:column nowrap;
+    height:auto;
+    max-height: inherit;
+    width: 100%;
+    margin-right: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.money>div{
+    position:relative;
+    flex-flow:column nowrap;
+    height:auto;
+    width: 8em;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.money>*>div{
+    height: 75px;
+    width: 75px;
+}
+
+.money:first-of-type>*>div:first-of-type{
+    position:absolute;
+   left: 60%;
+   bottom: 40%;
+   z-index: 1;
+   height:50px;
+   width: 50px;
+}

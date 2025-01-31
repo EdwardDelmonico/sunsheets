@@ -1,0 +1,74 @@
+<% layout('layouts/boilerplate') -%> 
+    
+<div class="container">
+    <h1 class="mb-3 text-center">Create New Vislae</h1>
+    
+    <nav class="mb-3">
+            
+        <div class="nav nav-pills nav-fill tablink" id="nav-tab" role="tablist">
+                
+            <a class="nav-item nav-link active" id="nav-name-tab" data-toggle="tab" href="#name" role="tab" aria-controls="nav-home" aria-selected="true">Name & Bio</a>
+              
+            <a class="nav-item nav-link" id="nav-order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="nav-profile" aria-selected="false">Order</a>
+              
+            <a class="nav-item nav-link" id="nav-heart-tab" data-toggle="tab" href="#heart" role="tab" aria-controls="nav-contact" aria-selected="false">Heart</a>
+              
+            <a class="nav-item nav-link" id="nav-forte-tab" data-toggle="tab" href="#forte" role="tab" aria-controls="nav-contact" aria-selected="false">Forte</a>
+              
+            <a class="nav-item nav-link" id="nav-soul-tab" data-toggle="tab" href="#soul" role="tab" aria-controls="nav-contact" aria-selected="false">Soul</a>
+              
+            <a class="nav-item nav-link" id="nav-foundation-tab" data-toggle="tab" href="#foundation" role="tab" aria-controls="nav-contact" aria-selected="false">Foundation</a>
+              
+            <a class="nav-item nav-link" id="nav-house-tab" data-toggle="tab" href="#house" role="tab" aria-controls="nav-contact" aria-selected="false">House</a>
+              
+            <a class="nav-item nav-link" id="nav-finish-tab" data-toggle="tab" href="#finish" role="tab" aria-controls="nav-contact" aria-selected="false">Finish</a>
+              
+        </div>
+        
+    </nav>
+        
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active mb-3" id="name" role="tabpanel" aria-labelledby="nav-name-tab">
+        
+                    <%- include('create/name') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="order" role="tabpanel" aria-labelledby="nav-order-tab">
+        
+                    <%- include('create/order') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="heart" role="tabpanel" aria-labelledby="nav-heart-tab">
+        
+                    <%- include('create/heart') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="forte" role="tabpanel" aria-labelledby="nav-forte-tab">
+        
+                    <%- include('create/forte') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="soul" role="tabpanel" aria-labelledby="nav-soul-tab">
+        
+                    <%- include('create/soul') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="foundation" role="tabpanel" aria-labelledby="nav-foundation-tab">
+        
+                    <%- include('create/foundation') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="house" role="tabpanel" aria-labelledby="nav-house-tab">
+        
+                    <%- include('create/house') %>
+        
+        </div>
+        <div class="tab-pane fade mb-3" id="finish" role="tabpanel" aria-labelledby="nav-finish-tab">
+        
+                    <%- include('create/finish') %>
+        
+        </div>
+        
+    </div>
+    
+</div>

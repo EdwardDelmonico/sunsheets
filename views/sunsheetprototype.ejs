@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Sheet?</title>
+    <link rel="stylesheet" href="GoeticStyleSheet.css">
+
+    <!-- <link rel="stylesheet" href="WeaverStyleSheet.css"> -->
+
+</head>
+
+<body>
+
+    <!--Character Header-->
+
+    <main id="sheet">
+        <header id="charheader" class="character-header">
+
+            <div class="character-tab">
+
+                <!-- Modify Character -->
+                <div id="modify-character" class="header-buttons circled-children">
+                    <div class="animate"><button id="edit">Edit</button></div>
+                    <div class="animate"><button id="advance">Advance</button></div>
+                    <div class="animate"><button id="passTime">Pass Time</button></div>
+                </div>
+
+                <div class="name-and-sentence">
+                    <!--Character Name-->
+                    <input id="name" name="name" type="text" placeholder="Character Name">
+
+                    <!--Sentence-->
+                    <div id="sentence" class="sentence">
+                        <span id="foundation" name="foundation">
+                            [foundation]
+                        </span>
+                        <span name="heart" id="heart">
+                            [heart]
+                        </span>
+                        <span name="order" id="order">
+                            [order]
+                        </span> who
+                        <span id="forte" name="forte" type="text" placeholder="Forte">
+                            [forte]
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Heart Relationships -->
+
+                <div class="circled-children header-buttons">
+                    <div id="heartFamily">Family</div>
+                    <div id="heartAnimal">Animal</div>
+                    <div id="heartObject">Object</div>
+                </div>
+
+            </div>
+
+            <!--Experience-->
+            <aside class="experience-tab" id="experience">
+
+                <!-- Acumen -->
+
+                <div id="acumen" class="experience ">
+                    <div>Acumen</div>
+                    <div class="circled-children">
+                        <div id="lifetimeAcumen" class="">Lifetime</div>
+                        <div id="currentAcumen" class="">Current</div>
+                    </div>
+                </div>
+
+                <!-- Joy -->
+
+                <div id="joy" class="experience ">
+                    <div>Joy</div>
+                    <div class="circled-children">
+                        <div id="lifetimeJoy" class="">Lifetime</div>
+                        <div id="currentJoy" class="">Current</div>
+                    </div>
+                </div>
+
+                <!-- Despair -->Joy
+
+                <div id="despair" class="experience ">
+                    <div>Despair</div>
+                    <div class="circled-children">
+                        <div id="lifetimeDespair" class="">Lifetime</div>
+                        <div id="currentDespair" class="">Current</div>
+                    </div>
+                </div>
+
+                <!-- Crux -->
+
+                <div id="crux" class="experience ">
+                    <div>Crux</div>
+                    <div class="circled-children">
+                        <div id="lifetimeCrux" class="">Lifetime</div>
+                        <div id="currentCrux" class="">Current</div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </header>
+        <hr>
+
+        <!-- Nav -->
+
+        <nav id="navigate" class="navbar">
+
+            <button class="tablink" onclick="openTab(event, 'status-tab')" id="status-nav">Status</button>
+
+            <button class="tablink" onclick="openTab(event, 'background-tab')" id="background-nav">Background</button>
+
+            <button class="tablink" onclick="openTab(event, 'abilities-tab')" id="abilities-nav">Abilities</button>
+
+            <button class="tablink" onclick="openTab(event, 'magic-tab')" id="magic-nav">Magic</button>
+
+            <button class="tablink" onclick="openTab(event, 'items-tab')" id="items-nav">Items</button>
+
+        </nav>
+        <hr>
+
+        <!-- Status -->
+
+        <section id="status-tab" class="tabcontent">
+
+            <div id="condition" class="condition">
+
+                <div id="health" class="health">
+
+
+                    <div id="armor" class="">
+                        <span id="armor-label" class="health-label">Armor</span>
+                        <span class="circled"></span>
+                    </div>
+
+
+                    <div id="injuries" class="">
+                        <span id="injuries-label" class="health-label">Injuries</span>
+                        <span id="firstInjury" class="circled"></span>
+                        <span id="secondInjury" class="circled"></span>
+                        <span id="thirdInjury" class="circled"></span>
+                    </div>
+
+                    <div id="wounds" class="">
+                        <span id="woundsLabel" class="health-label">Wounds</span>
+                        <span id="firstWound" class="circled"></span>
+                        <span id="secondWound" class="circled"></span>
+                        <span id="thirdWound" class="circled"></span>
+                    </div>
+
+                    <div id="anguish" class="">
+                        <span id="anguish-label" class="health-label">Anguish</span>
+                        <span id="firstAnguish" class="circled"></span>
+                        <span id="secondAnguish" class="circled"></span>
+                        <span id="thirdAnguish" class="circled"></span>
+                    </div>
+                </div>
+
+                <div class="incoming-damage circled">
+                    <div style="text-align: center;" id="damageSwitch" class="damage-type">
+                        <button id="physicalDamage" class="activeDamage">Physical</button>/<button id="mentalDamage"
+                            class="">Mental</button>
+                    </div>
+
+                    <button id="heal-damage" class="damage-buttons">Heal</button>
+                    <input id="enterDamage" type="number" min="0" max="100" placeholder="Damage">
+                    <button id="takeDamage" class="damage-buttons">Damage</button>
+
+                </div>
+
+                <div id="rests" class="circled-children rests circled">
+
+                    <span id="1-action-1" class="animate"><button>1 Action</button></span>
+
+                    <span id="1-action-2" class="animate"><button>1 Action</button></span>
+
+                    <span id="10-minute" class="animate"><button>10 Minutes</button></span>
+                    <span id="1-hour" class="animate"><button>1 Hour</button></span>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div id="quick-actions" class="quick-actions circled-children">
+                <div id="offense" class="circled-children">
+                    <div class="animate"><button>Attack</button></div>
+                    <div class="animate"><button>Spell</button></div>
+                    <div class="animate"><button>Item</button></div>
+                </div>
+                <div id="defense" class="circled-children">
+                    <div class="animate"><button>Dodge</button></div>
+                    <div class="animate"><button>Resist</button></div>
+                    <div class="animate"><button>Withstand</button></div>
+                </div>
+
+            </div>
+
+            <!-- Pools -->
+
+            <div id="pools" class="all-pools">
+
+                <!--Certes-->
+
+                <div id="certes-label">Certes</div>
+
+                <div id="certes" class="pools circled-children">
+
+
+                    <!-- Accuracy -->
+
+                    <div id="acc-pool" class="animate">
+
+                        <div id="accuracyScourge"></div>
+                        <h4>Accuracy</h4>
+                        <div id="accuracyValue"><span id="accuracyCurrent"></span>/<span id="accuracyMax"></span></div>
+                        <div id="accuracyVex"></div>
+
+                    </div>
+
+                    <!-- Movement -->
+
+                    <div id="mov-pool" class="animate">
+
+                        <div id="movementScourge"></div>
+                        <h4>Movement</h4>
+                        <div id="movementValue"><span id="movementCurrent"></span>/<span id="movementMax"></span></div>
+                        <div id="movementVex"></div>
+
+                    </div>
+
+                    <!-- Perception -->
+
+                    <div id="perc-pool" class=" animate">
+
+                        <div id="perceptionScourge"></div>
+                        <h4>Perception</h4>
+                        <div id="perceptionValue"><span id="perceptionCurrent"></span>/<span id="perceptionMax"></span>
+                        </div>
+                        <div id="perceptionVex"></div>
+
+                    </div>
+
+                    <!-- Physicality -->
+
+                    <div id="phys-pool" class="animate">
+
+                        <div id="physicalityScourge"></div>
+                        <h4>Physicality</h4>
+                        <div id="physicalityValue"><span id="physicalityCurrent"></span>/<span
+                                id="physicalityMax"></span></div>
+                        <div id="physicalityVex"></div>
+
+                    </div>
+
+                </div>
+
+                <!--Qualia-->
+
+                <div id="qualia-label">Qualia</div>
+
+                <div id="qualia" class="pools circled-children">
+
+                    <!-- Intellect -->
+
+                    <div id="intl-pool" class="animate">
+
+                        <div id="intellectScourge"></div>
+                        <h4>Intellect</h4>
+                        <div id="intellectValue"><span id="intellectCurrent"></span>/<span id="intellectMax"></span>
+                        </div>
+                        <div id="intellectVex"></div>
+
+                    </div>
+
+                    <!-- Interaction -->
+
+                    <div id="intr-pool" class="animate">
+
+                        <div id="interactionScourge"></div>
+                        <h4>Interaction</h4>
+                        <div id="interactionValue"><span id="interactionCurrent"></span>/<span
+                                id="interactionMax"></span></div>
+                        <div id="interactionVex"></div>
+
+                    </div>
+
+                    <!-- Sorcery -->
+
+                    <div id="sorc-pool" class="animate">
+
+                        <div id="sorceryScourge"></div>
+                        <h4>Sorcery</h4>
+                        <div id="sorceryValue"><span id="sorceryCurrent"></span>/<span id="sorceryMax"></span></div>
+                        <div id="sorceryVex"></div>
+
+                    </div>
+
+                    <!-- Sortilege-->
+
+                    <div id="sort-pool" class=" animate">
+
+                        <div id="sortilegeScourge"></div>
+                        <h4>Sortilege</h4>
+                        <div id="sortilegeValue"><span id="sortilegeCurrent"></span>/<span id="sortilegeMax"></span>
+                        </div>
+                        <div id="sortilegeVex"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Skills-->
+
+        <section id="abilities-tab" class="tabcontent">
+
+            <section id="skills">
+
+                <!--Action Skills-->
+
+                <div id="action-skills" class="circled scale">
+                    <h2>Action Skills</h2>
+                    <ul id="ActionSkillList" class="skillEntries">
+                    </ul>
+                    <form id="actionSkillForm" class="editable" action="">
+                        <input type="text" placeholder="Action Skill" id="actionSkill" required />
+                        <input type="number" placeholder="lvl" id="actionSkillLevel" min="0" max="4" required />
+                        <br>
+                        <button type: "submit" class="addButton addSkill" id="actionSkillAdd">+</button>
+                    </form>
+                </div>
+
+                <!--Narrative Skills-->
+
+                <div id="narrative-skills" class="circled scale">
+                    <h2>Narrative Skills</h2>
+                    <ul id="NarrativeSkillList" class="skillEntries">
+                    </ul>
+                    <form id="narrativeSkillForm" class="editable" action="">
+                        <input type="text" placeholder="Narrative Skill" id="narrativeSkill">
+                        <input type="number" id="narrativeSkillLevel" placeholder="lvl" min="0" max="4">
+                        <br>
+                        <button type: "submit" class="addButton addSkill" id="narrativeSkillAdd">+</button>
+                    </form>
+                </div>
+
+                <!--Development Skills-->
+
+                <div id="devSkills" class="circled scale">
+                    <h2>Development Skills</h2>
+                    <ul id="developmentSkillList" class="skillEntries">
+                    </ul>
+                    <form id="developmentSkillForm" action="" class="editable">
+                        <input type="text" placeholder="Development Skill" id="developmentSkill">
+                        <input type="number" placeholder="lvl" id="developmentSkillLevel" min="0" max="4">
+                        <br>
+                        <button type: "submit" class="addButton addSkill" id="developmentSkillAdd">+</button>
+                    </form>
+                </div>
+
+
+            </section>
+
+            <!--Orders-->
+            <section id="order-section">
+                <!-- Vance -->
+
+                <section id="vance" class="order">
+                    <h2>Vance Abilities</h2>
+                </section>
+
+                <!-- Maker -->
+                <section id="maker" class="order">
+                    <h2>Maker Abilities</h2>
+                    <span id="signature-bject">
+                        <h3>Signature Object</h3>
+                        <div id=""></div>
+                    </span>
+                    <span>
+                        <h3>Components</h3>
+                        <ul id="componentList" class="componentEntries">
+                        </ul>
+                        <form id="componentForm" action="">
+                            <input type="text" placeholder="Component" id="component">
+                            <input type="number" id="componentLevel" placeholder="lvl" min="0" max="4">
+                            <br>
+                            <button type: "submit" class="addButton addGenericLi" id="addComponent">+</button>
+                        </form>
+                    </span>
+                </section>
+
+                <!-- Weaver -->
+
+                <section id="weaver" class="order">
+                    <h2>Weaver Abilities</h2>
+                    <span id="aggregates">
+                        <h3>Aggregates Known</h3>
+                        <ul id="aggregateList" class="aggregateEntries">
+                        </ul>
+                        <form id="aggregateForm" action="">
+                            <input type="text" placeholder="Aggregates" id="aggregate">
+                            <br>
+                            <button type: "submit" class="addButton addGenericLi" id="addAggregates">+</button>
+                        </form>
+                    </span>
+                    <span id="enhancedWeaves">
+                        <h3>Enhanced Weaves</h3>
+                        <ul id="enhancedWeaveList" class="enhancedWeaveEntries">
+
+                        </ul>
+                        <form id="enhancedWeaveForm" action="">
+                            <input type="text" placeholder="Weave" id="enhancedWeave">
+                            <br>
+                            <button type: "submit" class="addButton addGenericLi" id="addEnhancedWeave">+</button>
+                        </form>
+                    </span>
+                    <span id="practicedWeaves">
+                        <h3>Practiced Weaves</h3>
+                        <ul id="practicedWeaveList" class="practicedWeaveEntries">
+
+                        </ul>
+                        <form id="practicedWeaveForm" action="">
+                            <input type="text" placeholder="Weave" id="practicedWeave">
+                            <br>
+                            <button type: "submit" class="addButton addGenericLi" id="addPracticedWeave">+</button>
+                        </form>
+                    </span>
+                </section>
+
+                <!-- Goetic -->
+
+                <section id="goetic" class="order circled-children">
+
+                    <div id="goetic-abilities">
+                        <h2>Goetic Abilities</h2>
+                    </div>
+
+                    <div id="summon-types">
+                        <h3>Summoning Types</h3>
+                        <button id="counsel" type="radio"></button><label for="counsel">Counsel</label>
+
+                        <button id="aid" type="radio"></button><label for="aid">Aid</label>
+
+                        <button id="guard" type="radio"></button><label for="guard">Guard</label>
+
+                        <button id="spy" type="radio"></button><label for="spy">Spy</label>
+
+                        <button id="query" type="radio"></button><label for="query">Query</label>
+
+                        <button id="theft" type="radio"></button><label for="theft">Theft</label>
+
+                        <button id="assail" type="radio"></button><label for="assail">Assail</label>
+
+                        <button id="restore" type="radio"></button><label for="restore">Restore</label>
+
+                        <button id="influence" type="radio"></button><label for="influence">Influence</label>
+
+                        <button id="creation" type="radio"></button><label for="creation">Creation</label>
+
+                        <button id="glorify" type="radio"></button><label for="glorify">Glorify</label>
+
+                        <button id="binding" type="radio"></button><label for="binding">Binding</label>
+
+                        <button id="ally" type="radio"></button><label for="ally">Ally</label>
+
+                    </div>
+                    <div class="circled">
+                        <h3>Entities Known</h3>
+                    </div>
+                    <div>
+                        <h3>Pacts Known</h3>
+                    </div>
+                    <div>
+                        <h3>Familiar</h3>
+                    </div>
+                </section>
+
+                <!-- Apostate -->
+
+                <section id="apostate" class="order">
+                    <h2>Apostate</h2>
+                    <div id="apostate-abilities">
+                        <h3>Apostate Abilities</h3>
+                        <ul id="ApostateAbilityList" class="ApostateAbilityEntries">
+                        </ul>
+                        <form id="apostateAbilityForm" action="">
+                            <input type="text" placeholder="Apostate Ability" id="apostateAbility">
+                            <br>
+                            <button type: "submit" class="addButton addGenericLi" id="addApostateAbility">+</button>
+                        </form>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Forte -->
+
+            <section id="forte-section" class="forte circled-children">
+                <h2>Forte Abilities</h2>
+                <ul id="forteAbilityList" class="forteAbilityEntries">
+                </ul>
+                <form id="forteAbilityForm" action="">
+                    <input type="text" placeholder="Forte Ability" id="apostateAbility">
+                    <input type="number" min="0" max="17" placeholder="lvl">
+                    <br>
+                    <button type: "submit" class="addButton addGenericLi" id="addForteAbility">+</button>
+                </form>
+            </section>
+        </section>
+
+        <!-- Background -->
+
+        <section id="background-tab" class="tabcontent">
+
+            <section id="allBonds" class="bonds circled-children">
+
+                <!--PC Bonds-->
+
+                <section id="pcBonds">
+                    <h2>PC Bonds</h2>
+                    <ul class="entry-list" id="pcBondList">
+                    </ul>
+                    <form id="pcBondForm" action="">
+                        <input type="text" name="pcbond" id="pcbond" placeholder="PC name"> is a
+                        <select name="pcbondtype" id="pcbondtype">
+                            <option value="defaultpcbond">PC bond</option>
+                            <option value="close criend ">Close Friend</option>
+                            <option value="fated companion ">Fated Companion</option>
+                            <option value="fellow student ">Fellow Student</option>
+                            <option value="friend from the past ">Friend from the Past</option>
+                            <option value="housemate ">Housemate</option>
+                            <option value="lover ">Lover</option>
+                            <option value="mystic bond">Mystic Bond</option>
+                            <option value="relative ">Relative</option>
+                            <option value="rival ">Rival</option>
+                            <option value="shadow friend ">Shadow Friend</option>
+                            <option value="steward ">Steward</option>
+                            <option value="charge ">Charge</option>
+                            <option value="unrequited">Unrequited Bond</option>
+                        </select>
+                        <br>
+                        <button type: "submit" class="addButton" id="addPcBond">+</button>
+                    </form>
+                </section>
+
+                <!--NPC Bonds-->
+
+                <section id="npcBonds">
+                    <h2>NPC Bonds</h2>
+                    <ul class="entry-list" id="npcEntryList">
+                    </ul>
+                    <form id="npcBondForm" action="">
+                        <input type="text" name="npcbond" id="npcbond" placeholder="NPC Name"> is a
+                        level
+                        <input type="number" name="npcbondlvl" id="npcbondlvl" min="0" max="4" placeholder="lvl">
+                        <select name="npcbondtype" id="npcbondtype">
+                            <option value="defaultnpcbond">NPC bond</option>
+                            <option value="associate ">Associate</option>
+                            <option value="contact ">Contact</option>
+                            <option value="friend ">Friend</option>
+                            <option value="old friend ">Old Friend</option>
+                            <option value="lover ">Lover</option>
+                            <option value="relative ">Relative</option>
+                            <option value="surrogate family member ">Surrogate Family</option>
+                        </select>
+                        <br>
+                        <button type: "submit" class="addButton" id="addNpcBond">+</button>
+                    </form>
+                </section>
+
+                <!--Connections-->
+
+                <section id="connections">
+                    <h2>Connections</h2>
+                    <ul class="entry-list">
+                    </ul>
+                    <form id="connectionForm" action="">
+                        Level
+                        <input type="number" name="connectionlvl" id="connectionlvl" min="0" max="4" placeholder="lvl">
+                        connection with
+                        <input type="text" name="connection" id="connection" placeholder="Organization Name">
+                        <input type="number" name="connectionlvl" id="connectionlvl" min="0" max="4" placeholder="lvl">
+                        <br>
+                        <button type: "submit" class="addButton" id="addConnection">+</button>
+                    </form>
+
+                </section>
+
+            </section>
+
+            <!--Arcs-->
+
+            <section id="arcs" class="circled-children arcs">
+                <span>
+                    <h3>Arcs In Progress</h3>
+                    <ul id="arcList">
+                    </ul>
+                    <form id="arcForm" action="">
+                        <input type="text" placeholder="Arc Description" id="arc" required />
+                        <br>
+                        <button type: "submit" class="addButton" id="arcAdd">+</button>
+                    </form>
+                </span>
+                <span>
+                    <h3>Completed Arcs</h3>
+                    <ul id="completedArcList">
+                    </ul>
+                </span>
+            </section>
+
+            <!--Appearance-->
+
+            <section id="description" class="circled-children appearance">
+                <div id="description">
+                    <h2>Description</h2>
+                    <div></div>
+                    <form action="">
+                        <textarea name="enterappearance" id="appearance" placeholder="What do you look like?" cols="30"
+                            rows="10"></textarea>
+                        <button type: "submit" class="addButton" id="appearanceAdd">+</button>
+                    </form>
+                </div>
+
+                <!-- Changes? -->
+
+                <div id="changes">
+                    <h2>Changes</h2>
+                    <ul id="changeList" class="">
+                    </ul>
+                    <form id="changeForm" action="" class="editable">
+                        <input type="text" placeholder="Change" id="change">
+                        <input type="number" placeholder="lvl" id="changeLevel" min="0" max="4">
+                        <br>
+                        <button type: "submit" class="addButton" id="changeAdd">+</button>
+                    </form>
+                </div>
+
+                <!-- Quirk -->
+
+                <div id="quirk">
+                    <h2>Quirk</h2>
+                </div>
+
+            </section>
+
+
+            <!-- House -->
+
+            <section id="house" class="circled-children">
+
+                <div id="house-summary">
+                    <h2>House</h2>
+                    <div id="house-level"></div>
+                    <div id="house-type"></div>
+                    <div id="house-description"></div>
+                </div>
+
+
+                <!-- House type etc -->
+                <div id="houseSecrets">
+                    <h2>House Secrets</h2>
+                    <ul id="houseSecretList">
+                    </ul>
+                    <form id="houseSecretForm" action="">
+                        <input type="text" placeholder="House Secret" id="houseSecret">
+                        <input type="number" id="houseSecretlvl'" placeholder="lvl" min="0" max="4">
+                        <br>
+                        <button type: "submit" class="addButton addGenericLi" id="addHouseSecret">+</button>
+                    </form>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Grimoire -->
+
+        <section id="magic-tab" class="tabcontent circled-children">
+            <!-- Spells -->
+
+            <div id="spellsknown" class="scale">
+                <h3>Spells</h3>
+                <ul id="spellList">
+                </ul>
+                <form id="spellForm" action="">
+                    <input type="text" placeholder="Spell" id="spell">
+                    <input type="number" id="spellLevel" placeholder="lvl" min="0" max="17">
+                    <br>
+                    <button type: "submit" class="addButton addGenericLi" id="spellAdd">+</button>
+                </form>
+
+            </div>
+
+            <!-- Cantrips -->
+
+            <div id="cantrips" class="scale">
+                <h3>Cantrips</h3>
+                <ul id="cantripList">
+                </ul>
+                <form id="cantripForm" action="">
+                    <input type="text" placeholder="Cantrip" id="cantrip">
+                    <br>
+                    <button type: "submit" class="addButton addGenericLi" placeholder="lvl" id="cantripAdd">+</button>
+                </form>
+
+            </div>
+
+            <!-- Incantations -->
+
+            <div id="incantations" class="scale">
+                <h3>Incantations</h3>
+                <ul id="incantationList">
+                </ul>
+                <form id="incantationForm" action="">
+                    <input type="text" placeholder="Incantation" id="incantation">
+                    <input type="number" id="incantationLevel" placeholder="lvl" min="0" max="17">
+                    <br>
+                    <button type: "submit" class="addButton addGenericLi" id="incantationAdd">+</button>
+                </form>
+                <h3>Encountered Incantations</h3>
+                <ul id="spellList">
+                </ul>
+            </div>
+
+            <!-- Long-Form Magic -->
+
+            <div id="longformmagic" class="scale">
+                <h3>Long-Form Magic</h3>
+                <ul id="longFormMagicList">
+                </ul>
+                <form id="longFormMagicForm" action="">
+                    <input type="text" placeholder="Long-Form Magic" id="longFormMagic">
+                    <input type="number" id="longFormMagicLevel" placeholder="lvl" min="0" max="17">
+                    <br>
+                    <button type: "submit" class="addButton addGenericLi" id="longFormMagicAdd">+</button>
+                </form>
+            </div>
+
+            <!-- Secrets -->
+
+            <section id="character-secrets" class="circled-children scale">
+                <div id="charsecrets">
+                    <h3>Character Secrets</h3>
+                    <ul id="characterSecretList">
+                    </ul>
+                    <form id="characterSecretForm" action="">
+                        <input type="text" placeholder="Character Secret" id="characterSecret">
+                        <input type="number" id="characterSecretLevel" placeholder="lvl" min="0" max="17">
+                        <br>
+                        <button type: "submit" class="addButton addGenericLi" id="characterSecretAdd">+</button>
+                    </form>
+
+                </div>
+            </section>
+        </section>
+
+        <!-- Possessions -->
+
+        <section id="possessions-tab" class="tabcontent">
+            <!-- Money -->
+
+            <aside class="money-tab" id="all-money">
+
+                <!-- Orbs -->
+
+                <div id="orbs" class="money">
+                    <div>Orbs</div>
+                    <div class="circled-children">
+                        <div id="orb-income" class="">Income</div>
+                        <div id="current-orbs" class="">Current</div>
+                    </div>
+                </div>
+
+                <!-- Magecoins -->
+
+                <div id="magecoins" class="money">
+                    <div>Magecoins</div>
+                    <div class="circled-children">
+                        <div id="current-magecoins" class="">Current</div>
+                    </div>
+                </div>
+
+
+                <!-- Bloodsilver -->
+
+                <div id="bloodsilver" class="money">
+                    <div>Bloodsilver</div>
+                    <div class="circled-children">
+
+                        <div id="current-bloodsilver" class="">Current</div>
+                    </div>
+                </div>
+
+
+                <!-- Hidden Knowledge -->
+
+                <div id="hidden-knowledge" class="money">
+                    <div>Hidden Knowledge</div>
+                    <div class="circled-children">
+
+                        <div id="current-hidden-knowledge" class="">Current</div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <section id="items" class="circled-children">
+                <!--Kindled Items-->
+                <div id="kindled-items" class="scale">
+                    <h2>Kindled Items</h2>
+
+                    <input type="text" placeholder="Item" id="kindled">
+                    <input type="number" min="0" max="17" placeholder="lvl" id="kindledlvl">
+                </div>
+
+                <!--Ephemera-->
+                <div id="ephemera" class="scale">
+                    <h2>Ephemera</h2>
+
+                    <input type="text" placeholder="Ephemera" id="ephemera">
+                    <input type="number" min="0" max="17" placeholder="lvl" id="ephemeralvl">
+                </div>
+
+                <!--Objects of Power-->
+                <div id="objects-of-power" class="scale">
+                    <h2>Objects of Power</h2>
+                    <input type=" text" placeholder="Object" id="oop">
+                    <input type="number" placeholder="lvl" min="0" max="17" id="oop-lvl">
+                </div>
+                <div class="hoverPopUp"></div>
+
+                <!--Mundane Items-->
+
+                <div id="items" class="scale">
+                    <h2>Items</h2>
+                    <input type=" text" placeholder="Item" id="item">
+                    <input type="number" min="0" max="17" placeholder="lvl" id="item-lvl">
+                </div>
+
+                <!--Valuables-->
+
+                <div id="valuables" class="scale">
+                    <h2>Valuables</h2>
+                    <input type="text" placeholder="Valuable" id="valuable">
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script src="newPC.js"></script>
+<script src="sunsheet.js"></script>
+
+</html>
