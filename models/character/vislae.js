@@ -7,13 +7,12 @@ const VislaeSchema = new Schema({
     name: String,
     foundation: String,
     heart: String,
-
     forte: {
         name: String,
         abilities: Array
     },
     soul: String,
-    experience: Object,
+    experience: Array,
     currency: {
         orbs: {
             current: Number,
@@ -25,7 +24,8 @@ const VislaeSchema = new Schema({
         hiddenKnowledge: Number
     },
     condition: {
-        armor: Number,
+        armorPhysical: Number,
+        armorMental: Number,
         injuries: Number,
         wounds: Number,
         anguish: Number,
@@ -39,8 +39,8 @@ const VislaeSchema = new Schema({
         oneHour: Boolean
     },
     pools: {
-        certes: Object,
-        qualia: Object
+        certes: Array,
+        qualia: Array
     },
     skills: {
         action: Array,
@@ -57,73 +57,38 @@ const VislaeSchema = new Schema({
         completed: Array
     },
     self: {
-        appearance: {
-            entry: String
-        },
+        appearance: String,
         changes: Array,
         quirk: String,
-        secrets: [
-
-        ],
-        shadowItem: ''
+        secrets: Array,
+        shadowItem: String
     },
     house: {
-        appearance: '',
-        type: '',
-        level: 0,
-        secrets: [
-        ]
+        appearance: String,
+        type: String,
+        level: Number,
+        secrets: Array
     },
     magic: {
-        spells: [],
-        cantrips: [],
+        spells: Array,
+        cantrips: Array,
         incantations: {
-            current: [],
-            encountered: [
-                {
-                    name: '',
-                    level: 0,
-                    description: '',
-                    color: ''
-                }
-            ]
+            current: Array,
+            encountered: Array,
         },
-        longForm: []
+        longForm: Array
     },
     items: {
-        ephemeraLimit: 3,
-        oopLimit: 3,
-        kindled: [
-            {
-                name: '',
-                level: '',
-                description: '',
-                color: ''
-            }
-        ],
-        ephemera: [
-            {
-                name: '',
-                level: 0,
-                description: '',
-                incantation: '',
-                color: ''
-            }
-        ],
-        oop: [
-            {
-                name: '',
-                level: 0,
-                description: '',
-                color: ''
-            }
-        ],
-        mundane: [
-            {
-                name: '',
-                level: 0,
-                description: ''
-            }],
-        valuables: []
+        ephemeraLimit: Number,
+        conationLimit: Number,
+        oopLimit: Number,
+        kindledItems: Array,
+        ephemera: Array,
+        oop: Array,
+        mundaneItems: Array,
+        valuables: Array
     }
 })
+
+const Vislae = mongoose.model('Vislae', VislaeSchema);
+module.exports = Vislae

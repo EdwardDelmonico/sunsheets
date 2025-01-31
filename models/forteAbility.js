@@ -11,6 +11,8 @@ const forteAbilitySchema = new mongoose.Schema({
     },
     cost: Number,
     facet: String,
+    next: Array,
+    available: Boolean,
     unlocked: Boolean
 })
 
