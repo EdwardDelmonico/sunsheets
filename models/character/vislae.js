@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const VislaeSchema = new Schema({
+    name: String,
+    id: Number,
     editing: Boolean,
     advancing: Boolean,
-    name: String,
     foundation: String,
     heart: String,
     forte: {
