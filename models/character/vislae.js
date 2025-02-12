@@ -1,13 +1,25 @@
 const mongoose = require('mongoose');
+const fortes = require('../assets/lists/fortes')
+const foundations = require('../assets/lists/foundations')
+const hearts = require('../assets/lists/hearts')
+const houses = require('../assets/lists/houses')
+const pool = require('./pool')
 const Schema = mongoose.Schema;
+
 
 const VislaeSchema = new Schema({
     name: String,
     id: Number,
     editing: Boolean,
     advancing: Boolean,
-    foundation: String,
-    heart: String,
+    foundation: {
+        type: String,
+        enum: foundations
+    },
+    heart: {
+        type: Object,
+        enum: hearts
+    },
     forte: {
         name: String,
         abilities: Array
@@ -25,8 +37,8 @@ const VislaeSchema = new Schema({
         hiddenKnowledge: Number
     },
     condition: {
-        armorPhysical: Number,
-        armorMental: Number,
+        physArmor: Number,
+        mentArmor: Number,
         injuries: Number,
         wounds: Number,
         anguish: Number,
@@ -66,7 +78,10 @@ const VislaeSchema = new Schema({
     },
     house: {
         appearance: String,
-        type: String,
+        type: {
+            type: String,
+            enum: houses
+        },
         level: Number,
         secrets: Array
     },
