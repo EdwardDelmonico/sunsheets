@@ -25,7 +25,20 @@ const VislaeSchema = new Schema({
         abilities: Array
     },
     soul: String,
-    experience: Array,
+    experience: {
+        joy: {
+            current: Number,
+            lifetime: Number
+        },
+        despair: {
+            current: Number,
+            lifetime: Number
+        },
+        acumen: {
+            current: Number,
+            lifetime: Number
+        }
+    },
     currency: {
         orbs: {
             savings: Number,
@@ -52,8 +65,18 @@ const VislaeSchema = new Schema({
         oneHour: Boolean
     },
     pools: {
-        certes: Array,
-        qualia: Array
+        certes: {
+            accuracy: Object,
+            movement: Object,
+            interaction: Object,
+            physicality: Object
+        },
+        qualia: {
+            intellect: Object,
+            perception: Object,
+            sorcery: Object,
+            sortilege: Object
+        }
     },
     skills: {
         action: Array,
