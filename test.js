@@ -27,7 +27,12 @@ const seedDB = async () => {
     advancing: false,
     foundation: rand(foundations),
     heart: rand(hearts),
-    forte: rand(fortes),
+    order: {
+        name: 'goetic'
+    },
+    forte: {
+        name: rand(fortes)
+    },
     soul: 'dunno',
     experience: {
         joy: {
@@ -45,7 +50,11 @@ const seedDB = async () => {
     },
     currency: {
         orbs: {
-            savings: 0,
+            savings: {
+                glass: 0,
+                crystal: 0,
+                gem:0
+            },
             income: 0
         },
         magecoins: 0,
