@@ -21,10 +21,8 @@ const rand = arr => {
 
 const seedDB = async () => {
     await Vislae.deleteMany({});
-    for (let i = 0; i < 100; i++) {
-        const vislae = new Vislae({
- name: 'test guy',
-    id: 1,
+    const vislae = new Vislae({
+    name: 'test guy',
     editing: false,
     advancing: false,
     foundation: rand(foundations),
@@ -196,7 +194,6 @@ const seedDB = async () => {
         })
         await vislae.save();
     }
-}
 
 seedDB().then(() => {
     console.log('seeded')

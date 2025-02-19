@@ -1,9 +1,16 @@
-<% layout('layouts/boilerplate')-%> 
+<% layout('layouts/boilerplate') %> 
 
     <div class="container">
         <h1 class="text-center mb-3">Main Menu</h1>
         
         <ul>
+            <% for (let vislae of vislaes){ %>
+                <li>
+                    <a href="/character/<%= vislae._id %>">
+                        <%= vislae.name %>
+                    </a>
+                </li>
+                <% } %>
             <li>
                 <a href="/create">Create New Character</a>
             </li>

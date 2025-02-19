@@ -9,7 +9,6 @@ const Schema = mongoose.Schema;
 
 const VislaeSchema = new Schema({
     name: String,
-    id: Number,
     editing: Boolean,
     advancing: Boolean,
     foundation: {
