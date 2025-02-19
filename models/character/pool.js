@@ -1,6 +1,6 @@
-const Pool = {
-    current: Number,
-    max: Number,
-    vex: Number,
-    scourge: Number
+module.exports =  {
+    current: 0,
+    max: 0,
+    vex: 0,
+    scourge: 0
 }

@@ -19,8 +19,12 @@ const VislaeSchema = new Schema({
         type: Object,
         enum: hearts
     },
+    order: Object,
     forte: {
-        name: String,
+        name: {
+            type:String,
+            enum:fortes
+        },
         abilities: Array
     },
     soul: String,
@@ -40,7 +44,11 @@ const VislaeSchema = new Schema({
     },
     currency: {
         orbs: {
-            savings: Number,
+            savings: {
+                glass: Number,
+                crystal: Number,
+                gem: Number
+            },
             income: Number
         },
         magecoins: Number,

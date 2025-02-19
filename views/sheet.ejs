@@ -4,7 +4,33 @@
 <h1>
     <%= vislae.name %>
 </h1>
-    
+<h2>
+    <%= vislae.foundation %> <%= vislae.heart.name %> <%= vislae.order.name %> who <%= vislae.forte.name %>
+</h2>
+<div id="experience">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">Joy <%= vislae.experience.joy.current %></li>
+        <li class="list-group-item">Despair <%= vislae.experience.despair.current %></li>
+        <li class="list-group-item">Acumen <%= vislae.experience.acumen.current %></li>
+    </ul>
+</div>
+<div id="currency">
+    <ul class="list-group">
+        <li class="list-group-item"> 
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">Gem <%= vislae.currency.orbs.savings.gem %></li>
+                <li class="list-group-item">Crystal <%= vislae.currency.orbs.savings.crystal %></li>
+                <li class="list-group-item">Glass <%= vislae.currency.orbs.savings.glass %></li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">Magecoins <%= vislae.currency.magecoins %></li>
+                <li class="list-group-item">Bloodsilver <%= vislae.currency.bloodsilver %></li>
+                <li class="list-group-item">Demontears <%= vislae.currency.demontears %></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
 
 </div>
 

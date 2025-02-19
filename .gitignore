@@ -2,3 +2,4 @@ node_modules/
 imgs/
 models/assets/lists/
 .DS_Store
+test.js
